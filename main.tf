@@ -31,6 +31,6 @@ data "aws_kms_key" "ebs" {
 }
 
 resource "aws_ebs_default_kms_key" "ebs" {
-  count   = var.var.enable_ebs_encryption ? 1 : 0
+  count   = var.enable_ebs_encryption ? 1 : 0
   key_arn = data.aws_kms_key.ebs.arn
 }

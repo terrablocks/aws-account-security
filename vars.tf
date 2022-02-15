@@ -48,7 +48,7 @@ variable "allow_users_to_change_password" {
 }
 
 variable "password_reuse_prevention" {
-  type        = bool
+  type        = number
   default     = 25
   description = "Number of previous passwords user should not be allowed to use"
 }
