@@ -34,3 +34,10 @@ resource "aws_ebs_default_kms_key" "ebs" {
   count   = var.enable_ebs_encryption ? 1 : 0
   key_arn = data.aws_kms_key.ebs.arn
 }
+
+# Access Analyzer
+resource "aws_accessanalyzer_analyzer" "this" {
+  count         = var.enable_accessanalyzer ? 1 : 0
+  analyzer_name = var.analyzer_name
+  type          = var.analyzer_type
+}
