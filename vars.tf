@@ -49,8 +49,8 @@ variable "allow_users_to_change_password" {
 
 variable "password_reuse_prevention" {
   type        = number
-  default     = 25
-  description = "Number of previous passwords user should not be allowed to use"
+  default     = 24
+  description = "Number of previous passwords user should not be allowed to use. Max: 24"
 }
 
 variable "max_password_age" {
@@ -107,4 +107,23 @@ variable "ebs_encryption_key" {
   type        = string
   default     = "alias/aws/ebs"
   description = "ID/Alias/ARN of the KMS key to use by default for EBS encryption"
+}
+
+# Access Analyzer
+variable "enable_accessanalyzer" {
+  type        = bool
+  default     = true
+  description = "Whether to enable IAM Access Analyzer or not"
+}
+
+variable "analyzer_name" {
+  type        = string
+  default     = "permissions-analyzer"
+  description = "Name for access analyzer"
+}
+
+variable "analyzer_type" {
+  type        = string
+  default     = "ACCOUNT"
+  description = "Type of access analyzer to create. **Valid values:** `ACCOUNT` or `ORGANIZATION`"
 }
