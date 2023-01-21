@@ -18,7 +18,7 @@ module "security" {
 ## Important - Please read before using the module
 - To enable IAM Access Analyzer at organisation level below mentioned prerequisites must be met:
   - Please make sure organisation is already created and you are running the template using Management Account credentials or Delegated Administrator Account credentials
-  - IAM Access Analyzer integration is enabled at organization level. Refer to [AWS doc](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html) for more details
+  - IAM Access Analyzer integration is enabled at organization level. Refer to [AWS doc](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html) or [CLI ref](https://docs.aws.amazon.com/cli/latest/reference/organizations/enable-aws-service-access.html) for more details
 
 ## Requirements
 
